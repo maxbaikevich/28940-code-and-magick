@@ -35,20 +35,16 @@ window.renderStatistics = function(ctx) {
   ctx.textBaseline = 'hanging';
   ctx.fillText('Ура вы победили!', 130, 25);
   ctx.fillText('Список результатов:',130, 45);
-
-  
+ 
   ctx.fillStyle = '#000';
-  ctx.fillText('Вы', FONT_PADDING_LEFT, FONT_PADDING_TOP);
-  ctx.fillRect(PADDING_LEFT_COLUMN, PADDING_TOP_COLUMN, WIDTH_COLUMN, HEIGT_COLUMN);
 
-  ctx.fillText('Кекс', (PADDING_LEFT_COLUMN + (WIDTH_COLUMN * 2)) , FONT_PADDING_TOP);
-  ctx.fillRect((PADDING_LEFT_COLUMN +(WIDTH_COLUMN * 2)), PADDING_TOP_COLUMN, WIDTH_COLUMN,HEIGT_COLUMN);
+  var players = ['Вы', 'Кекс', 'Катя', 'Игорь'];
 
-  ctx.fillText('Катя', (PADDING_LEFT_COLUMN + (WIDTH_COLUMN * 4)) , FONT_PADDING_TOP);
-  ctx.fillRect((PADDING_LEFT_COLUMN +(WIDTH_COLUMN * 4)), PADDING_TOP_COLUMN, WIDTH_COLUMN,HEIGT_COLUMN);
+  for (var i = 0; i < players.length; i++) {
   
-  ctx.fillText('Игорь', (PADDING_LEFT_COLUMN + (WIDTH_COLUMN * 6)) , FONT_PADDING_TOP);
-  ctx.fillRect((PADDING_LEFT_COLUMN +(WIDTH_COLUMN * 6)), PADDING_TOP_COLUMN, WIDTH_COLUMN,HEIGT_COLUMN);
+  ctx.fillText(players[i], (PADDING_LEFT_COLUMN + (WIDTH_COLUMN * (i + i))) , FONT_PADDING_TOP);
+  ctx.fillRect((PADDING_LEFT_COLUMN +(WIDTH_COLUMN * (i + i))), PADDING_TOP_COLUMN, WIDTH_COLUMN,HEIGT_COLUMN);
 
+  }
 
 };
